@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header class="sticky top-0">
+        <div class="w-full bg-white shadow-md">
+            <div class="max-w-7xl relative flex h-16  justify-between items-center mx-auto w-full px-10">
+                <div>
+                    <a class="font-medium text-lg" href="/">studentEase</a>
+                </div>
+                <nav>
+                    <ul class="flex gap-x-10">
+                        <li><a class="<%= currentPath === '/' ? 'text-blue-600' : 'text-black' %>"  href="/">Home</a></li>
+                        <li><a class="<%= currentPath === '/students/register' ? 'text-blue-600' : 'text-black' %>" href="/students/register">Register</a></li>
+                        <li><a class="<%= currentPath === '/students' ? 'text-blue-600' : 'text-black' %>" href="/students">Students</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+    <main class="h-[calc(100vh-150px)]">
+        <div class="max-w-3xl mx-auto p-6 mt-10">
+            <h1 class="text-2xl font-bold mb-6 text-blue-600">Student updation Form</h1>
+            <form action="/students/<%= std._id %>/update" method="post" class="bg-white shadow-md rounded-lg p-6 space-y-4">
+                <div>
+                <label class="block text-sm font-medium mb-1 text-gray-700">USN</label>
+                <input value="<%= std.usn %>" oninput="this.value = this.value.toUpperCase()" maxlength="10" type="text" name="usn" placeholder="Enter USN" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+                <div>
+                <label class="block text-sm font-medium mb-1 text-gray-700">Full Name</label>
+                <input value="<%= std.fname %>" type="text" name="fname" placeholder="Enter Full Name" class="w-full px-4  py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                <label class="block text-sm font-medium mb-1 text-gray-700">Email</label>
+                <input value="<%= std.email %>" type="email" name="email" placeholder="Enter Email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                <label class="block text-sm font-medium mb-1 text-gray-700">Course</label>
+                <input value="<%= std.course %>" type="text" name="course" placeholder="Enter Course" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div class="pt-4">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">
+                    Register Student
+                </button>
+                </div>
+            </form>
+        </div>
+    </main>
+<%- include('partials/footer') %>
